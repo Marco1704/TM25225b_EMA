@@ -1,0 +1,81 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="DuplicatedCode" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <Languages>
+        <language minSize="63" name="Python" />
+      </Languages>
+    </inspection_tool>
+    <inspection_tool class="PyArgumentEqualDefaultInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
+    <inspection_tool class="PyAugmentAssignmentInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
+    <inspection_tool class="PyClassicStyleClassInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="PyCompatibilityInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ourVersions">
+        <value>
+          <list size="2">
+            <item index="0" class="java.lang.String" itemvalue="3.9" />
+            <item index="1" class="java.lang.String" itemvalue="3.10" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyMandatoryEncodingInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="7">
+            <item index="0" class="java.lang.String" itemvalue="csv" />
+            <item index="1" class="java.lang.String" itemvalue="msacessdb" />
+            <item index="2" class="java.lang.String" itemvalue="os" />
+            <item index="3" class="java.lang.String" itemvalue="numpy" />
+            <item index="4" class="java.lang.String" itemvalue="mathplotlib" />
+            <item index="5" class="java.lang.String" itemvalue="pandas" />
+            <item index="6" class="java.lang.String" itemvalue="fitz" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8Inspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="E501" />
+          <option value="E231" />
+          <option value="E128" />
+          <option value="E225" />
+          <option value="E302" />
+          <option value="E125" />
+          <option value="E251" />
+          <option value="E303" />
+          <option value="E265" />
+          <option value="E266" />
+          <option value="W605" />
+          <option value="E402" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="N806" />
+          <option value="N803" />
+          <option value="N802" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="uniclass_bclearer_source.sandpit.load.load_stage_4.load_stage_4_orchestrator.orchestrate_load_stage_4_data_importer" />
+          <option value="uniclass_bclearer_source.sandpit.evolve.evolve_stage_1.data_processor.evolve_atage_1_process_orchestrator.dataframe_dictionary" />
+          <option value="uniclass_to_nf_ea_com_source.b_code.uniclass_raw_to_domain.evolve.evolve_stage_8.domain_tables_data_processor.classification_instance_of_rank_to_link_table_generator.filter_and_rename" />
+          <option value="tkinter.askdirectory" />
+          <option value="pyodbc.Cursor.copy_expert" />
+          <option value="app.route" />
+          <option value="str.coordinate" />
+          <option value="pydub.audio_segment.AudioSegment.from_text" />
+          <option value="fitz.open" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
