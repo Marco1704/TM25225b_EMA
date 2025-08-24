@@ -5,13 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>EduMax — Admin</title>
   <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/mas2327_custom.css">
 </head>
 <body>
   <div class="container">
-    <header class="py-3 border-bottom">
-      <div class="row align-items-center">
-        <div class="col"><h1 class="h2 mb-0">EduMax</h1></div>
-      </div>
+    <header class="py-3">
+       <div class="row align-items-center">
+          <div class="col-6 col-md-3">
+            <img class="img-fluid" src="../img/EduMax_logo.png" alt="EduMax logo">
+          </div>
+          <div class="col-6 col-md-6 text-md-center">
+            <h1 class="h2 my-2 header-title mb-0">Admin Console</h1>
+            <p class="text-muted mb-0 small">Signed in as <span class="fw-semibold">admin@example.com</span></p>
+          </div>
+          <div class="col-12 col-md-3 text-md-end mt-2 mt-md-0">
+            <a class="btn btn-primary btn-sm" href="#">Logout</a>
+          </div>
+       </div>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark mt-3 rounded-3">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">Home</a>
@@ -27,8 +37,9 @@
               <li class="nav-item"><a class="nav-link" href="#">Announcements</a></li>
               <li class="nav-item"><a class="nav-link" href="#">Users</a></li>
             </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search admin…" aria-label="Search">
+            <form class="d-flex" role="search" aria-label="Search">
+              <label for="globalSearch" class="visually-hidden">Search</label>
+              <input id="globalSearch" class="form-control me-2" type="search" placeholder="Search site" aria-label="Search">
               <button class="btn btn-outline-light" type="submit">Search</button>
             </form>
           </div>
@@ -36,26 +47,29 @@
       </nav>
     </header>
     <main class="my-3">
-      <p>Bootstrap layout online.</p>
+      <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+        <ol class="breadcrumb small">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item"><a href="#">News</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Edit item</li>
+        </ol>
+      </nav>
     </main>
-      <footer>
-    <!-- Row 5 -->
-        <div class="row me-0">
-            <div class="col">
-                <nav class="nav">
-                    <!-- secondary navigation -->
-                    <a class="nav-link" href="./form.html">Privacy</a>
-                    <a class="nav-link" href="./form.html">About Us</a>
-                    <a class="nav-link" href="./form.html">Support</a>
-                </nav>
-            </div>
-            <div class="col text-end">
-                <!-- copyright notice, right-aligned -->
-                <p>&copy; EduMax 2025</p>
-            </div>
+      <footer class="mt-5 py-4 border-top">
+        <div class="row align-items-center">
+          <div class="col-sm-6 small">
+            <nav class="nav">
+              <a class="nav-link" href="#">Privacy</a>
+              <a class="nav-link" href="#">About Us</a>
+              <a class="nav-link" href="#">Support</a>
+            </nav>
+          </div>
+          <div class="col-sm-6 text-end small">
+            &copy; EduMax 2025
+          </div>
         </div>
       </footer>
-  </div>
+    </div>
   <script src="../js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
