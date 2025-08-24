@@ -4,17 +4,59 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>EduMax — Admin</title>
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
   <div class="container">
-    <header>
-      <h1>EduMax</h1>
+    <header class="py-3 border-bottom">
+      <div class="row align-items-center">
+        <div class="col"><h1 class="h2 mb-0">EduMax</h1></div>
+      </div>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark mt-3 rounded-3">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Home</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#adminNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="adminNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+              <li class="nav-item"><a class="nav-link active" href="#">Modules</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Events</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">News</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Announcements</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Users</a></li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search admin…" aria-label="Search">
+              <button class="btn btn-outline-light" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
     </header>
-    <main>
-      <p>Main Content</p>
+    <main class="my-3">
+      <p>Bootstrap layout online.</p>
     </main>
-    <footer>EduMax footer</footer>
+      <footer>
+    <!-- Row 5 -->
+        <div class="row me-0">
+            <div class="col">
+                <nav class="nav">
+                    <!-- secondary navigation -->
+                    <a class="nav-link" href="./form.html">Privacy</a>
+                    <a class="nav-link" href="./form.html">About Us</a>
+                    <a class="nav-link" href="./form.html">Support</a>
+                </nav>
+            </div>
+            <div class="col text-end">
+                <!-- copyright notice, right-aligned -->
+                <p>&copy; EduMax 2025</p>
+            </div>
+        </div>
+      </footer>
   </div>
+  <script src="../js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
 
