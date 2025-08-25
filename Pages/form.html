@@ -18,7 +18,7 @@
           </div>
           <div class="col-6 col-md-6 text-md-center">
             <h1 class="h1 my-2 header-title mb-0">Edumax - Admin Console</h1>
-            <p class="text-muted mb-0 small">Signed in as <span class="fw-semibold">admin</span></p>
+            <p class="mb-0 small text-white">Signed in as <span class="fw-semibold text-white">admin</span></p>
           </div>
           <div class="col-12 col-md-3 text-md-end mt-2 mt-md-0">
             <a class="btn btn-primary btn-sm" href="#">Logout</a>
@@ -27,12 +27,8 @@
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark mt-3 rounded-3">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">Home</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#adminNav">
-            <span class="navbar-toggler-icon"></span>
-          </button>
           <div class="collapse navbar-collapse" id="adminNav">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
               <li class="nav-item"><a class="nav-link active" href="#">Modules</a></li>
               <li class="nav-item"><a class="nav-link" href="#">Events</a></li>
               <li class="nav-item"><a class="nav-link" href="#">News</a></li>
@@ -53,12 +49,14 @@
         <ol class="breadcrumb small">
           <li class="breadcrumb-item"><a href="#">Home</a></li>
           <li class="breadcrumb-item"><a href="#">News</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Edit item</li>
+          <li class="breadcrumb-item active" aria-current="page">Edit news</li>
         </ol>
       </nav>
       <section class="mb-4">
         <h2 class="h3">Edit news item</h2>
-        <form id="newsForm" method="post" action="https://students.open.ac.uk/mct/tm252/reflect/reflect.php">
+        <form id="newsForm" class="needs-validation" novalidate method="post"
+              action="https://students.open.ac.uk/mct/tm252/reflect/reflect.php">
+
           <input type="hidden" name="itemID" value="10002000-3000-123456abcdef">
           <p class="text-muted small">Fields marked <span class="text-danger">*</span> are required.</p>
           <div class="mb-3">
@@ -78,6 +76,64 @@
             <textarea id="body" name="body" class="form-control" rows="6" required>
           Full article text goes here…</textarea>
           </div>
+          <div class="row g-3">
+            <div class="col-sm-6 col-md-4">
+              <label for="publishDate" class="form-label">Publish date</label>
+              <input type="date" class="form-control" id="publishDate" name="publishDate" value="2025-08-01">
+            </div>
+            <div class="col-sm-6 col-md-4">
+              <label for="publishTime" class="form-label">Publish time</label>
+              <input type="time" class="form-control" id="publishTime" name="publishTime" value="09:00">
+            </div>
+            <div class="col-sm-6 col-md-4">
+              <label for="status" class="form-label">Status</label>
+              <select id="status" name="status" class="form-select">
+                <option value="draft">Draft</option>
+                <option value="scheduled">Scheduled</option>
+                <option value="published" selected>Published</option>
+                <option value="archived">Archived</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="row g-3 mt-0">
+            <div class="col-sm-6">
+              <label for="author" class="form-label">Author</label>
+              <input type="text" class="form-control" id="author" name="author" value="M. Smith">
+            </div>
+            <div class="col-sm-6">
+              <label for="category" class="form-label">Category</label>
+              <select id="category" name="category" class="form-select">
+                <option>General</option>
+                <option selected>Platform updates</option>
+                <option>Events</option>
+                <option>Modules</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="row g-3 mt-0">
+            <div class="col-sm-6">
+              <label for="imageUrl" class="form-label">Feature image URL</label>
+              <input type="url" class="form-control" id="imageUrl" name="imageUrl" placeholder="https://example.com/image.jpg">
+            </div>
+            <div class="col-sm-6">
+              <label for="tags" class="form-label">Tags</label>
+              <input type="text" class="form-control" id="tags" name="tags" value="taster, ab101, update">
+            </div>
+          </div>
+
+          <div class="form-check form-switch mt-3">
+            <input class="form-check-input" type="checkbox" role="switch" id="featured" name="featured" checked>
+            <label class="form-check-label" for="featured">Feature on homepage</label>
+          </div>
+
+          <div class="d-flex gap-2 mt-4">
+            <button type="submit" class="btn btn-primary">Save changes</button>
+            <button type="reset" class="btn btn-outline-secondary">Reset</button>
+            <a class="btn btn-link" href="#" role="button">Cancel</a>
+          </div>
+
         </form>
       </section>
     </main>
@@ -96,6 +152,19 @@
         </div>
       </footer>
     </div>
+  <script>
+    (function () {
+      'use strict';
+      const form = document.getElementById('newsForm');
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    })();
+  </script>
   <script src="../js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
