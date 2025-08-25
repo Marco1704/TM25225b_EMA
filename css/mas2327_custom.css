@@ -2,11 +2,9 @@
     background-color: #3c9fc3;
     color: white;
 }
-.header-title { background:#3c9fc3; color:#fff; padding:.25rem .75rem; border-radius:.75rem; }
-h2, h3, h4 { color:#005f73; }
+.header-title { background:#3c9fc3; color:white; padding:.25rem .75rem; border-radius:.75rem; }
 
-
-h1.header {
+h1 {
     font-size: 9vw;
 }
 
